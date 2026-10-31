@@ -12,4 +12,4 @@
 
 Single self-contained `index.html`.
 
-> Meme coin for fun. Contract address is posted at launch. Not financial advice.
+> Meme coin for fun. Not financial advice.

@@ -161,7 +161,6 @@ footer{position:relative;z-index:2;text-align:center;padding:40px 20px 60px;colo
     <div class="line">LAUNCHING ON PUMPFUN. NOT PAIRED TO ANYTHING.</div>
     <div class="dock">
       <div class="hint">CLICK THE TOOKAN · IT DANCES TO THE BEAT</div>
-      <div class="ca"><span id="caTxt">CA · DROPS AT LAUNCH</span><button id="caBtn">⧉ COPY</button></div>
       <div class="soc">
         <a href="https://x.com/UseTookan" target="_blank" rel="noopener" id="xLink" aria-label="tookan on X" title="@UseTookan on X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.77L17.75 3Zm-1.08 16.17h1.7L7.4 4.74H5.58l11.09 14.43Z"/></svg></a>
         <a href="#buy" aria-label="how to buy" title="how to buy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg></a>
@@ -194,7 +193,7 @@ footer{position:relative;z-index:2;text-align:center;padding:40px 20px 60px;colo
       <div class="steps">
         <div class="card step" data-r><div class="k">01</div><h3>GET PHANTOM</h3><p>Download the Phantom wallet. Write down your seed phrase and never share it.</p></div>
         <div class="card step" data-r><div class="k">02</div><h3>LOAD SOL</h3><p>Buy SOL on an exchange and send it to your Phantom wallet.</p></div>
-        <div class="card step" data-r><div class="k">03</div><h3>SWAP FOR $TOOKAN</h3><p>At launch, paste the CA on jup.ag or pump.fun and swap. Beak up.</p></div>
+        <div class="card step" data-r><div class="k">03</div><h3>SWAP FOR $TOOKAN</h3><p>Find tookan on pump.fun or jup.ag and swap. Beak up.</p></div>
       </div></section>
   </div>
 </main>
@@ -402,7 +401,7 @@ const TRACKS=[['Three Little Birds','Bob Marley & The Wailers'],['Learn to Fly',
 $('#tracks').innerHTML=TRACKS.map(([s,a],i)=>{const q=encodeURIComponent(s+' '+a);return `<div class="trk"><span class="n">${String(i+1).padStart(2,'0')}</span><div><b>${s}</b><small>${a}</small></div><div class="lk"><a class="sp" href="https://open.spotify.com/search/${q}" target="_blank" rel="noopener">SPOTIFY</a><a href="https://www.youtube.com/results?search_query=${q}" target="_blank" rel="noopener">YOUTUBE</a></div></div>`}).join('');
 
 /* ============ MISC ============ */
-$('#caBtn').onclick=()=>{toast('CA drops at launch. Follow on X for it.');squawk()};
+
 $('#xLink').onclick=e=>{if($('#xLink').getAttribute('href')==='#'){e.preventDefault();toast('X link coming soon')}};
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});$$('[data-r]').forEach(el=>io.observe(el));
 $('#sqk').textContent=squawks.toLocaleString();
